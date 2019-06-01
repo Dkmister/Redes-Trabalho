@@ -10,9 +10,9 @@ if len(sys.argv)!= 4:
 	sys.exit(1)
 
 # Initialization
-client.server_hostname = str(sys.argv[1])
+client.server_hostname = (sys.argv[1])
 client.port = int(sys.argv[2])
-client.bandwitdh = int(sys.argv[3]) * 1024
+client.bandwitdh = int(sys.argv[3])
 
 print('Connecting to {0}:{1}'.format(client.server_hostname, client.port))
 result = client.run()
