@@ -2,8 +2,8 @@ import iperf3
 import sys
 
 client = iperf3.Client()
-client.duration = 1
-client.protocol = 'udp' 
+client.duration = 10
+client.protocol = 'udp'
 
 if len(sys.argv)!= 4:
 	print("Usage: python3 gt.py hostname port bandwitdh")
@@ -12,8 +12,8 @@ if len(sys.argv)!= 4:
 # Initialization
 client.server_hostname = (sys.argv[1])
 client.port = int(sys.argv[2])
-client.bandwitdh = int(sys.argv[3])
-
+client.bandwitdh = int(sys.argv[3]) * 1024
+print(client.bandwitdh)
 print('Connecting to {0}:{1}'.format(client.server_hostname, client.port))
 result = client.run()
 
