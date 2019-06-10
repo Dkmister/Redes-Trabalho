@@ -13,8 +13,8 @@ bandwidth = sys.argv[3]
 sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 print('Sending data to '+destIP+ '@'+ port+' with bandwidth of '+bandwidth+'KBps')
 
-time_sleep = 1/(int(bandwidth)*1024)
-
+time2sleep = 1/(int(bandwidth))
+b =int(bandwidth)
 while True:
-	sock.sendto(bytes(1),(destIP,int(port)))
-	time.sleep(time_sleep)
+	sock.sendto(bytes(200),(destIP,int(port)))
+	time.sleep(time2sleep)
