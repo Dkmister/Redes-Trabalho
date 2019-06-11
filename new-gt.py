@@ -18,7 +18,7 @@ b = int(bandwidth)
 if b <= 2000:
 	time2sleep = time2sleep * 0.92
 if b > 2000:
-	time2sleep = time2sleep * 0.6777
+	time2sleep = time2sleep * 0.6
 
 
 print(time2sleep)
